@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kaiser's Beautiful Hangout</title>
+<meta name="description" content="Welcome to Kaiser's beautiful group chat hangout. What they got right, what they got wrong and what they missed, with screenshots.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23e8c36a'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='21' text-anchor='middle' fill='%230c0b10'%3EK%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-room="welcome">
+<div class="glow g-welcome"></div><div class="glow g-right"></div><div class="glow g-wrong"></div><div class="glow g-missed"></div><div class="glow g-eight"></div>
+
+<header id="bar" hidden>
+  <button class="brand" data-go="welcome" aria-label="Back to the welcome screen">Kaiser's <em>hangout</em></button>
+  <nav id="tabs" aria-label="Rooms">
+    <button data-go="right" class="t-right"><i></i>Minimally right</button>
+    <button data-go="wrong" class="t-wrong"><i></i>Completely wrong</button>
+    <button data-go="missed" class="t-missed"><i></i>Completely missed</button>
+    <button data-go="eight" class="t-eight"><i></i>The 8sty special</button>
+  </nav>
+  <button class="ghost" data-modal="story">How we got here</button>
+</header>
+
+<main id="welcome">
+  <div class="float" aria-hidden="true">
+    <span style="--x:3%;--y:13%;--d:0s">can't wait for kaiser to join 😊</span>
+    <span style="--x:78%;--y:9%;--d:-5s">he wants you, trust</span>
+    <span style="--x:2%;--y:45%;--d:-9s">this guy is a gen dork</span>
+    <span style="--x:83%;--y:40%;--d:-3s">@kaiser time up</span>
+    <span style="--x:4%;--y:80%;--d:-12s">im busy rm</span>
+    <span style="--x:77%;--y:83%;--d:-7s">why even add him here if we shit talk him</span>
+  </div>
+  <div class="hero">
+    <p class="pill"><i></i>19 members <b>·</b> 1 kick <b>·</b> 0 apologies from 8sty</p>
+    <h1>Welcome to Kaiser's <em>beautiful</em> group chat hangout.</h1>
+    <p class="lead">My bestie AI helped me decorate, since that seems to be everyone's favorite topic. The screenshots are all real though, so if anything in here is wrong, you're welcome to show me. And don't worry, nobody gets kicked after 10 minutes in this one.</p>
+    <div class="doors">
+      <button class="door d-right" data-go="right">
+        <small>Room one</small>
+        <strong>Minimally right</strong>
+        <span>What they actually got right. I'll say so, because I can.</span>
+        <em>8 full credit, 5 half credit</em>
+      </button>
+      <button class="door d-wrong" data-go="wrong">
+        <small>Room two</small>
+        <strong>Completely wrong</strong>
+        <span>The arguments that fall apart, and how they talked to me versus about me.</span>
+        <em>9 arguments, 12 side by sides</em>
+      </button>
+      <button class="door d-missed" data-go="missed">
+        <small>Room three</small>
+        <strong>Completely missed</strong>
+        <span>What's in my video that nobody answered, and what they admitted without noticing.</span>
+        <em>12 points left blank</em>
+      </button>
+      <button class="door d-eight" data-go="eight">
+        <small>The VIP room</small>
+        <strong>The 8sty special</strong>
+        <span>He admitted nothing, answered nothing, and has no time for any of this. He's been very busy not having time. Plus my theory on why he came after me when he did.</span>
+      </button>
+    </div>
+    <p class="foot">
+      <button data-modal="story">How we got here</button><button data-modal="before">Before you say it</button>
+    </p>
+    <p class="please">Please don't go message any of these people because of this. I'm not asking for that and I don't want it.</p>
+  </div>
+</main>
+
+<section id="roomview" hidden>
+  <aside id="side"></aside>
+  <article id="detail" tabindex="-1"></article>
+</section>
+
+<div id="modal" hidden><div class="sheet" role="dialog" aria-modal="true"><button class="close" aria-label="Close">×</button><div id="modalbody"></div></div></div>
+<div id="lb" hidden><img alt=""></div>
+
+<script src="content.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
